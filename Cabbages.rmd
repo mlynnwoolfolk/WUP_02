@@ -18,7 +18,7 @@ veggy <- cabbages
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
 
-### The cabbages data from the MASS package is loaded into a dataframe called veggy. Complete this report by answering the following two questions  
+ The cabbages data from the MASS package is loaded into a dataframe called veggy. Complete this report by answering the following two questions  
  
 ### Is there a difference in average VitC between c39 and c52 cultivation methods?  
 
@@ -30,7 +30,7 @@ $H_A%: There is a difference in the average vitamin c content.
 # Methods
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
-vitamin c is numerical,cultivation is categorical 
+Vitamin c is numerical,cultivation is categorical 
 
 numerical~categorical so we use the numerical~cat helper file
 
@@ -58,16 +58,17 @@ The boxplot shows that cultivation method C52 generally has more VitC than C39
 favstats(VitC~Cult,data=veggy)
 ```
 
-The numerical summary shows....
+The numerical summary shows that the C52 has more VitC than the C39
 
 ## Inferential Results
-
-<!--State hypothesis clearly. Make sure your discussion of the inferential test covers all the aspects that the test output produces, suchas test statistic, p-value etc. Make a decision about the null hypothesis, explain the assumptions which the selected test/procedure satisfys the assumptions and is appropriate to answer the research!-->
 
 ```{r}
 t.test(VitC~Cult,data=veggy)
 ```
-The p-value is....
+
+The P-value is so small we wpuld reject the null hypothesis. 
+
+<!--State hypothesis clearly. Make sure your discussion of the inferential test covers all the aspects that the test output produces, suchas test statistic, p-value etc. Make a decision about the null hypothesis, explain the assumptions which the selected test/procedure satisfys the assumptions and is appropriate to answer the research!-->
 
 # Discussilon and Conclusion 
 
